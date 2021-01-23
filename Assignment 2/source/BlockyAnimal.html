@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Spongebob</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports "canvas"
+    </canvas><br>
+
+    Change camera angle by dragging on canvas<br>
+    <input type="button" id="setPoseDefault" onclick="setPoseDefault()" value="Default Pose">
+    <input type="button" id="toggleAnimation" onclick="toggleAnimation()" value="Toggle Animation"><br>
+
+    <div class = "colorcontainer">
+      Zoom
+      <input type="range" min="10" max="200" value="80" class="slider" id="zoom">
+      Animation Speed
+      <input type="button" id="setAnimSlow" onclick="setAnimSlow()" value="Slow">
+      <input type="button" id="setAnimNorm" onclick="setAnimNorm()" value="Normal">
+      <input type="button" id="setAnimFast" onclick="setAnimFast()" value="Fast"><br>
+      Right Shoulder 
+      <input type="range" min="-180" max="180" value="0" class="slider" id="rightShoulderX">
+      Left Shoulder 
+      <input type="range" min="-180" max="180" value="0" class="slider" id="leftShoulderX"><br>
+      Right Forearm
+      <input type="range" min="0" max="89" value="0" class="slider" id="rightArm">
+      Left Forearm
+      <input type="range" min="0" max="89" value="0" class="slider" id="leftArm"><br>
+      Right Leg
+      <input type="range" min="150" max="250" value="180" class="slider" id="rightLeg">
+      Left Leg
+      <input type="range" min="150" max="250" value="180" class="slider" id="leftLeg"><br>
+      Lower Right Leg
+      <input type="range" min="0" max="69" value="0" class="slider" id="rightLowerLeg">
+      Lower Left Leg
+      <input type="range" min="0" max="69" value="0" class="slider" id="leftLowerLeg"><br>
+    </div>
+
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix.js"></script>
+    <script src="BlockyAnimal.js"></script>
+    <script src="Point.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Circle.js"></script>
+    <script src="Cube.js"></script>
+  </body>
+</html>
